@@ -17,7 +17,7 @@ namespace FoodMenu.Controllers
                          select d;
             if (!string.IsNullOrEmpty(searchString))
             {
-                dishes = dishes.Where(d => d.Name.Contains(searchString));
+                dishes = dishes.Where(d => d.Name.ToLower().Contains(searchString.ToLower()));
                 return View(await dishes.ToListAsync());
 
             }
