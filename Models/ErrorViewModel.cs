@@ -1,4 +1,4 @@
-namespace Menu.Models;
+namespace FoodMenu.Models;
 
 public class ErrorViewModel
 {

@@ -1,7 +1,7 @@
-using Menu.Models;
+using FoodMenu.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Menu.Data
+namespace FoodMenu.Data
 {
     public class MenuContext : DbContext
     {
@@ -35,7 +35,14 @@ namespace Menu.Data
                         Id = 1,
                         Name = "Margherita",
                         Price = 7.50,
-                        ImageUrl = "https://www.eataly.com/us_en/magazine/recipes/pizza-and-focaccia-recipes/pizza-margherita"
+                        ImageUrl = "https://fr.ooni.com/cdn/shop/articles/Margherita-9920.jpg?crop=center&height=800&v=1644590066&width=800"
+                    },
+                    new Dish
+                    {
+                        Id = 2,
+                        Name = "Mozarella",
+                        Price = 8.50,
+                        ImageUrl = "https://www.galbani.fr/wp-content/uploads/2018/12/pizza_facon_caprese.jpg"
                     }
                 );
 
@@ -50,7 +57,7 @@ namespace Menu.Data
             modelBuilder.Entity<DishIngredient>()
                 .HasData(
                     new DishIngredient { DishId = 1, IngredientId = 1 },
-                    new DishIngredient { DishId = 1, IngredientId = 2 }
+                    new DishIngredient { DishId = 2, IngredientId = 2 }
                 );
 
             base.OnModelCreating(modelBuilder);

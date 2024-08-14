@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Menu.Models;
+using FoodMenu.Models;
 
-namespace Menu.Controllers;
+namespace FoodMenu.Controllers;
 
 public class HomeController : Controller
 {

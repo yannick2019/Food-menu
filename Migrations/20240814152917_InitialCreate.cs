@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace Menu.Migrations
+namespace FoodMenu.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -67,7 +67,11 @@ namespace Menu.Migrations
             migrationBuilder.InsertData(
                 table: "Dishes",
                 columns: new[] { "Id", "ImageUrl", "Name", "Price" },
-                values: new object[] { 1, "https://www.eataly.com/us_en/magazine/recipes/pizza-and-focaccia-recipes/pizza-margherita", "Margherita", 7.5 });
+                values: new object[,]
+                {
+                    { 1, "https://fr.ooni.com/cdn/shop/articles/Margherita-9920.jpg?crop=center&height=800&v=1644590066&width=800", "Margherita", 7.5 },
+                    { 2, "https://www.galbani.fr/wp-content/uploads/2018/12/pizza_facon_caprese.jpg", "Mozarella", 8.5 }
+                });
 
             migrationBuilder.InsertData(
                 table: "Ingredients",
@@ -84,7 +88,7 @@ namespace Menu.Migrations
                 values: new object[,]
                 {
                     { 1, 1 },
-                    { 1, 2 }
+                    { 2, 2 }
                 });
 
             migrationBuilder.CreateIndex(

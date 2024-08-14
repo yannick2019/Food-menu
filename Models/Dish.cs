@@ -1,4 +1,4 @@
-namespace Menu.Models
+namespace FoodMenu.Models
 {
     public class Dish
     {
@@ -6,6 +6,6 @@ namespace Menu.Models
         public string Name { get; set; } = default!;
         public string ImageUrl { get; set; } = default!;
         public double Price { get; set; }
-        public List<DishIngredient>? DishIngredients { get; set; }
+        public List<DishIngredient> DishIngredients { get; set; } = new List<DishIngredient>();
     }
 }
