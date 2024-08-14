@@ -1,7 +1,14 @@
+using Menu.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<MenuContext>(options =>
+{
+    options.UseSqlite("Data Source=Menu.db");
+});
 
 var app = builder.Build();
 
