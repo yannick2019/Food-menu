@@ -19,7 +19,7 @@
             @foreach(var item in Model.DishIngredients)
             {
                 <li>
-                    @item.Ingredient.Name
+                    @item.Ingredient?.Name
                 </li>
             }
         </ul>
